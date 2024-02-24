@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src:
+    local('Amazon Ember'),
+    local('AmazonEmber-Regular'),
+    url('/fonts/AmazonEmber-Regular.woff2') format('woff2'),
+    url('/fonts/AmazonEmber-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  font-style: italic;
+  src:
+    local('Amazon Ember'),
+    local('AmazonEmber-Italic'),
+    url('/fonts/AmazonEmber-Italic.woff2') format('woff2'),
+    url('/fonts/AmazonEmber-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  font-weight: 700;
+  src:
+    local('Amazon Ember'),
+    local('AmazonEmber-Bold'),
+    url('/fonts/AmazonEmber-Bold.woff2') format('woff2'),
+    url('/fonts/AmazonEmber-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Amazon Ember';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local('Amazon Ember'),
+    local('AmazonEmber-BoldItalic'),
+    url('/fonts/AmazonEmber-BoldItalic.woff2') format('woff2'),
+    url('/fonts/AmazonEmber-BoldItalic.woff') format('woff');
+}
+
+@layer base {
+  @import './themes/primary.scss';
+
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-primary);
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-primary);
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+  }
+}
+
+.a-icon-logo,
+.a-logo {
+  background-position: -5px -130px;
+  height: 31px;
+  width: 103px;
+}
+
+.a-icon,
+.a-link-emphasis:after {
+  background-image: url(https://m.media-amazon.com/images/S/sash/mPGmT0r6IeTyIee.png);
+  -webkit-background-size: 400px 750px;
+  background-size: 400px 750px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+}
+
+// input view
+.input-wrap {
+  .input-custom {
+    @apply w-full h-[31px] text-btn-text bg-white py-[3px] px-[7px] leading-normal border border-solid border-gray-400 border-t-gray-500 shadow-secondary rounded-[3px] outline-none transition-all ease-linear;
+
+    &:focus {
+      @apply bg-gray-50 border-cyan shadow-cyan;
+    }
+  }
+}
+
+.button-custom {
+  text-decoration: none;
+  vertical-align: middle;
+  padding: 0 10px 0 11px;
+  @apply rounded-lg shadow-btn w-full text-btn-text border-solid border cursor-pointer inline-block text-center leading-[29px] transition-all ease-linear;
+
+  &__default {
+    @apply bg-primary border-secondary;
+
+    &:hover {
+      @apply bg-warning-v2 border-warning-secondary-v2;
+    }
+  }
+}
