@@ -4,7 +4,7 @@ const config: Config = {
   content: [
     './src/libraries/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     fontFamily: {
@@ -54,6 +54,7 @@ const config: Config = {
         primary: 'var(--sw-primary)',
         secondary: 'var(--sw-secondary)',
         danger: 'var(--sw-danger)',
+        'danger-secondary': 'var(--sw-danger-secondary)',
         cyan: 'var(--sw-cyan)',
         btn: 'var(--sw-btn)',
         card: 'var(--sw-card)'

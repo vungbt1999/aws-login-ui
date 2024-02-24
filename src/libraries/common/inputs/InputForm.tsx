@@ -47,6 +47,18 @@ export const InputForm = forwardRef(function Input(props: InputProps, ref: Ref<H
         })}
         {...reset}
       />
+
+      {/** error message */}
+      {isHaveError && (
+        <div className="block mt-[6px]">
+          <div className="text-danger relative pl-4">
+            <i className="a-icon a-icon-alert"></i>
+            <div className="mb-0 text-left text-xs leading-[15px]">
+              Enter your email or mobile phone number
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 });
