@@ -39,8 +39,7 @@ export default function Home() {
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
-              onSubmit={handleSubmit}
-            >
+              onSubmit={handleSubmit}>
               {() => {
                 return (
                   <Form>
@@ -58,18 +57,16 @@ export default function Home() {
 
             {/** legal text */}
             <div className="text-xs leading-normal mt-4.5 w-full">
-              By continuing, you agree to Amazon's{' '}
+              {"By continuing, you agree to Amazon's"}{' '}
               <Link
                 className="box-border text-link no-underline transition-all ease-linear hover:text-link-hover hover:underline"
-                href="/"
-              >
+                href="/">
                 Conditions of Use
               </Link>{' '}
               and{' '}
               <Link
                 href="/"
-                className="box-border text-link no-underline transition-all ease-linear hover:text-link-hover hover:underline"
-              >
+                className="box-border text-link no-underline transition-all ease-linear hover:text-link-hover hover:underline">
                 Privacy Notice
               </Link>
               .
